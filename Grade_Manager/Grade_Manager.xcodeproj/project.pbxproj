@@ -11,6 +11,7 @@
 		357FDBD026428D1F00C94736 /* GradesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357FDBCF26428D1F00C94736 /* GradesRow.swift */; };
 		357FDBD226428DE600C94736 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357FDBD126428DE600C94736 /* Grade.swift */; };
 		357FDBD426428E9100C94736 /* GradesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357FDBD326428E9100C94736 /* GradesDetail.swift */; };
+		3595D1A5264323A800793EA1 /* GradeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595D1A4264323A800793EA1 /* GradeData.swift */; };
 		35A1F0A0262E324E0071ECA4 /* Grade_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A1F09F262E324E0071ECA4 /* Grade_ManagerApp.swift */; };
 		35A1F0A2262E324E0071ECA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A1F0A1262E324E0071ECA4 /* ContentView.swift */; };
 		35A1F0A4262E324F0071ECA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A1F0A3262E324F0071ECA4 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		357FDBCF26428D1F00C94736 /* GradesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesRow.swift; sourceTree = "<group>"; };
 		357FDBD126428DE600C94736 /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		357FDBD326428E9100C94736 /* GradesDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesDetail.swift; sourceTree = "<group>"; };
+		3595D1A4264323A800793EA1 /* GradeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeData.swift; sourceTree = "<group>"; };
 		35A1F09C262E324E0071ECA4 /* Grade_Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grade_Manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A1F09F262E324E0071ECA4 /* Grade_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade_ManagerApp.swift; sourceTree = "<group>"; };
 		35A1F0A1262E324E0071ECA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3595D1A6264323AC00793EA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3595D1A4264323A800793EA1 /* GradeData.swift */,
+				357FDBD126428DE600C94736 /* Grade.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		35A1F093262E324E0071ECA4 = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +119,7 @@
 				357FDBCD26428BFF00C94736 /* GradesList.swift */,
 				357FDBCF26428D1F00C94736 /* GradesRow.swift */,
 				357FDBD326428E9100C94736 /* GradesDetail.swift */,
-				357FDBD126428DE600C94736 /* Grade.swift */,
+				3595D1A6264323AC00793EA1 /* Model */,
 				35A1F0A3262E324F0071ECA4 /* Assets.xcassets */,
 				35A1F0A8262E324F0071ECA4 /* Info.plist */,
 				35A1F0A5262E324F0071ECA4 /* Preview Content */,
@@ -271,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3595D1A5264323A800793EA1 /* GradeData.swift in Sources */,
 				357FDBD026428D1F00C94736 /* GradesRow.swift in Sources */,
 				357FDBCE26428BFF00C94736 /* GradesList.swift in Sources */,
 				357FDBD426428E9100C94736 /* GradesDetail.swift in Sources */,

@@ -8,8 +8,11 @@
 import Foundation
 import SwiftUI
 
+//Grade object
 struct Grade {
+    var id: Int
     var className: String
     var classGrade: Int
+    var description: String
     
 }

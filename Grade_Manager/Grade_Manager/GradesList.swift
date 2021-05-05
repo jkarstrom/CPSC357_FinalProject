@@ -7,10 +7,13 @@
 
 import SwiftUI
 
+//shows the list of classes and grades
+//on the top it shows overall GPA
+
 struct GradesList: View {
     var body: some View {
         NavigationView {
-            List(Grade) { Grade in NavigationLink(destination:GradesDetail(Grade:Grade)) { GradesRow(Grade:Grade)
+            List(grades) { grade in NavigationLink(destination:GradesDetail(grade:grade)) { GradesRow(grade:grade)
                 
                 }
             }
@@ -21,6 +24,10 @@ struct GradesList: View {
 
 struct GradesList_Previews: PreviewProvider {
     static var previews: some View {
-        GradesList()
+        ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
+            GradesList()
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                .previewDisplayName(deviceName)
+        }
     }
 }

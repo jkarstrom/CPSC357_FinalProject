@@ -12,11 +12,9 @@ struct GradesRow: View {
     
     var body: some View {
         HStack {
-            Grade.image
-                .resizable()
-                .frame(width: 50, height: 50)
-            Text(Grade.name)
+            Text(Grade.className)
             Spacer()
+            //Text(Grade.classGrade) would show the class average
         }
     }
 }
@@ -24,8 +22,8 @@ struct GradesRow: View {
 struct GradesRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            GradesRow(Grade: Grade[0])
-            GradesRow(Grade: Grade[1])
+            GradesRow(Grade: Grades[0])
+            GradesRow(Grade: Grades[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

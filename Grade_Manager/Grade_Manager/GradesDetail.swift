@@ -7,11 +7,18 @@
 
 import SwiftUI
 
+//needs to have an edit (class name, grade, and credits) and delete class option
+//shows grade and credits
+
 struct GradesDetail: View {
     var Grade: Grade
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView{
+            
+        }
+        .navigationTitle(grade.className)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
