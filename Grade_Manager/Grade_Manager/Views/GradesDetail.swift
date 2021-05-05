@@ -17,13 +17,13 @@ struct GradesDetail: View {
         ScrollView{
             
         }
-        .navigationTitle(grade.className)
+        .navigationTitle(Grade.className)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct GradesDetail_Previews: PreviewProvider {
     static var previews: some View {
-        GradesDetail(Grade: Grades[1])
+        GradesDetail(Grade: grades[1])
     }
 }

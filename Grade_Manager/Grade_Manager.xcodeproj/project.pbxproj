@@ -91,6 +91,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3595D1A726432D3B00793EA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				35A1F0A1262E324E0071ECA4 /* ContentView.swift */,
+				357FDBCD26428BFF00C94736 /* GradesList.swift */,
+				357FDBCF26428D1F00C94736 /* GradesRow.swift */,
+				357FDBD326428E9100C94736 /* GradesDetail.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3595D1A82643324800793EA1 /* Resourses  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Resourses ";
+			sourceTree = "<group>";
+		};
 		35A1F093262E324E0071ECA4 = {
 			isa = PBXGroup;
 			children = (
@@ -115,11 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				35A1F09F262E324E0071ECA4 /* Grade_ManagerApp.swift */,
-				35A1F0A1262E324E0071ECA4 /* ContentView.swift */,
-				357FDBCD26428BFF00C94736 /* GradesList.swift */,
-				357FDBCF26428D1F00C94736 /* GradesRow.swift */,
-				357FDBD326428E9100C94736 /* GradesDetail.swift */,
+				3595D1A726432D3B00793EA1 /* Views */,
 				3595D1A6264323AC00793EA1 /* Model */,
+				3595D1A82643324800793EA1 /* Resourses  */,
 				35A1F0A3262E324F0071ECA4 /* Assets.xcassets */,
 				35A1F0A8262E324F0071ECA4 /* Info.plist */,
 				35A1F0A5262E324F0071ECA4 /* Preview Content */,

@@ -13,7 +13,9 @@ import SwiftUI
 struct GradesList: View {
     var body: some View {
         NavigationView {
-            List(grades) { grade in NavigationLink(destination:GradesDetail(grade:grade)) { GradesRow(grade:grade)
+            List(grades) { Grade in
+                NavigationLink(destination:GradesDetail(Grade:Grade)) {
+                    GradesRow(Grade:Grade)
                 
                 }
             }
