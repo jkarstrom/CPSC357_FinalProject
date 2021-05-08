@@ -1,1 +1,7 @@
 # CPSC357_FinalProject
+
+## 1. IDENTIFYING INFO
+
+## 2. DESCRIPTION
+
+## 3. REFERENCES
