@@ -13,16 +13,16 @@ import SwiftUI
 struct GradesList: View {
     var body: some View {
         NavigationView {
-            List(grades) { Grade in
-                NavigationLink(destination:GradesDetail(Grade:Grade)) {
-                    GradesRow(Grade:Grade)
-                
+            List(grades) { grade in
+                NavigationLink(destination: GradesDetail(grade: grade)) {
+                    GradesRow(grade: grade)
                 }
             }
             .navigationTitle("Grades")
         }
     }
 }
+
 
 struct GradesList_Previews: PreviewProvider {
     static var previews: some View {
