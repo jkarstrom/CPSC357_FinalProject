@@ -7,7 +7,7 @@
 
 import Foundation
 
-var grades: [Grade] = load("gradeData.json")
+var courses: [Course] = load("courseData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

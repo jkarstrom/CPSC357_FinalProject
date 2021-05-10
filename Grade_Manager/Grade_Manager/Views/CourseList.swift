@@ -10,24 +10,26 @@ import SwiftUI
 //shows the list of classes and grades
 //on the top it shows overall GPA
 
-struct GradesList: View {
+struct CourseList: View {
     var body: some View {
+        //overall average
+        //veritccal stack
         NavigationView {
-            List(grades) { grade in
-                NavigationLink(destination: GradesDetail(grade: grade)) {
-                    GradesRow(grade: grade)
+            List(courses) { course in
+                NavigationLink(destination: CourseDetail(Course: course)) {
+                    CourseRow(Course: course)
                 }
             }
-            .navigationTitle("Grades")
+            .navigationTitle("Course")
         }
     }
 }
 
 
-struct GradesList_Previews: PreviewProvider {
+struct CourseList_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
-            GradesList()
+            CourseList()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }
