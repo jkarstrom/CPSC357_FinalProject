@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct CourseDetail: View {
+    var Course: Course
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView{
+            
+        }
+        .navigationTitle(Course.className)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct CourseDetail_Previews: PreviewProvider {
     static var previews: some View {
-        CourseDetail()
+        CourseDetail(Course: courses[1])
     }
 }
