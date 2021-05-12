@@ -1,0 +1,25 @@
+[
+       {
+           "id": 1,
+           "className": "CHEM140",
+           "classGradeLetter": "B",
+           "classGrade": 82,
+           "credits": 3,
+       },
+
+       {
+           "id": 2,
+           "className": "MATH111",
+           "classGradeLetter": "C",
+           "classGrade": 76,
+           "credits": 3,
+       },
+
+       {
+           "id": 3,
+           "className": "PSYCH100",
+           "classGradeLetter": "A",
+           "classGrade": 97,
+           "credits": 3,
+       }
+]

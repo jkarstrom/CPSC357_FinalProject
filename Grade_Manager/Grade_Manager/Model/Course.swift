@@ -12,7 +12,7 @@ import SwiftUI
 struct Course: Identifiable,Codable {
     var id: Int
     var className: String
+    var classGradeLetter: String
     var classGrade: Int
-    var description: String
     var credits: Int
 }

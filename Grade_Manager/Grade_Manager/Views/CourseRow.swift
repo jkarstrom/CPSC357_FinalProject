@@ -14,7 +14,8 @@ struct CourseRow: View {
         HStack {
             Text(Course.className)
             Spacer()
-            //Text(Grade.classGrade) would show the class average
+            Text(Course.classGradeLetter)
+            
         }
     }
 }
