@@ -1,29 +1,20 @@
 //
-//  GradesDetail.swift
+//  CourseDetail.swift
 //  Grade_Manager
 //
-//  Created by Joan Karstrom on 5/5/21.
+//  Created by Joan Karstrom on 5/12/21.
 //
 
 import SwiftUI
 
-//needs to have an edit (class name, grade, and credits) and delete class option
-//shows grade and credits
-
-struct GradesDetail: View {
-    var Grade: Grade
-    
+struct CourseDetail: View {
     var body: some View {
-        ScrollView{
-            
-        }
-        .navigationTitle(Grade.className)
-        .navigationBarTitleDisplayMode(.inline)
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct GradesDetail_Previews: PreviewProvider {
+struct CourseDetail_Previews: PreviewProvider {
     static var previews: some View {
-        GradesDetail(Grade: grades[1])
+        CourseDetail()
     }
 }
