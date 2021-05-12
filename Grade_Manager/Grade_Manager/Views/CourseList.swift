@@ -12,6 +12,8 @@ import SwiftUI
 
 struct CourseList: View {
     var body: some View {
+        
+        
         //overall average
         //veritccal stack
         NavigationView {
