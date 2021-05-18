@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-//Grade object
+//Course object
 struct Course: Identifiable,Codable {
     var id: Int
     var className: String

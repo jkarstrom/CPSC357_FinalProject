@@ -13,17 +13,45 @@ import SwiftUI
 struct CourseList: View {
     var body: some View {
         
-        
-        //overall average
-        //veritccal stack
-        NavigationView {
-            List(courses) { course in
-                NavigationLink(destination: CourseDetail(Course: course)) {
-                    CourseRow(Course: course)
-                }
+        VStack {
+            
+            //overall average
+            HStack{
+                Text("Overall GPA: ")
+                    .font(.largeTitle)
+                
+                //Text(String(getGPA(Course: courses[]))
+                //    .font(.largeTitle)
             }
-            .navigationTitle("Course")
+            
+            Spacer()
+            
+            Button(action: {
+                //NewCourse()
+                //writes to Json file a new class
+            }) {
+                HStack {
+                    Text("Add Course")
+                        .fontWeight(.semibold)
+                }
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.black)
+                .cornerRadius(30)
+            }
+           
+            NavigationView {
+                List(courses) { course in
+                    NavigationLink(destination: CourseDetail(Course: course)) {
+                        CourseRow(Course: course)
+                    }
+                }
+                .navigationTitle("Courses")
+            }
+            
         }
+        .background(Color.pink)
+        
     }
 }
 
