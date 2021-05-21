@@ -48,9 +48,10 @@ struct CourseDetail: View {
                     .cornerRadius(40)
                 }
                 
-                //this button will delete the course from the Json file
+                // this button will delete the course from the Json file
                 Button(action: {
-                    //delete courses.courses[Course.id]
+                    courses.remove(at: Course.id)
+                    CourseList()
                 }) {
                     HStack {
                         Image(systemName: "trash")

@@ -13,23 +13,25 @@ import SwiftUI
 struct NewCourse: View {
 
     @State var courseNameN: String = ""
+    @State var courseLetterN: String = ""
     @State var courseGradeN: String = ""
     @State var courseCreditsN: String = ""
     
     var body: some View {
         VStack(alignment: .leading) {
-            TextField("Enter course Name", text: $courseNameN)
+            TextField("Enter course name", text: $courseNameN)
                 .padding(.vertical)
-            TextField("Enter course grade", text: $courseGradeN)
+            TextField("Enter course grade letter", text: $courseLetterN)
                 .padding(.vertical)
-            TextField("Enter course grade", text: $courseCreditsN)
+            TextField("Enter course grade percentage", text: $courseGradeN)
                 .padding(.vertical)
-            
-            //this is where the writing to the Json file i think would be 
-            
+            TextField("Enter course credits", text: $courseCreditsN)
+                .padding(.vertical)
             
             Button(action: {
-                //Leave
+                let newCourse: Course = Course(id: courses.count+1, className: courseNameN, classGradeLetter: courseLetterN, classGrade: Int(courseGradeN)!, credits: Int(courseCreditsN)!)
+                courses.append(newCourse)
+                ContentView()
             }) {
                 HStack {
                     Image(systemName: "square.and.arrow.down")

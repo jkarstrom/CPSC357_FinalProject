@@ -8,6 +8,7 @@
 import Foundation
 
 var courses: [Course] = load("courseData.json")
+var gpa: Double = getGPA(courses: courses)
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
@@ -37,11 +38,13 @@ func getGPA(courses: [Course]) -> Double {
     var totalPoints: Double = 0
     
     for course in courses {
-        totalPoints += getClassGPA(grade: course.classGradeLetter)
+        let classPoints: Double = getClassGPA(grade: course.classGradeLetter) * Double(course.credits)
+        totalPoints += classPoints
         totalCredits += course.credits
     }
     
-    print (totalPoints/Double(totalCredits))
+    print (totalPoints)
+    print (totalCredits)
     return totalPoints / Double(totalCredits)
 
 }

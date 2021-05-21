@@ -20,15 +20,14 @@ struct CourseList: View {
                 Text("Overall GPA: ")
                     .font(.largeTitle)
                 
-                //Text(String(getGPA(Course: courses[]))
-                //    .font(.largeTitle)
+                Text(String(gpa))
+                    .font(.largeTitle)
             }
             
             Spacer()
             
             Button(action: {
-                //NewCourse()
-                //writes to Json file a new class
+                NewCourse()
             }) {
                 HStack {
                     Text("Add Course")
