@@ -19,7 +19,7 @@ struct CourseDetail: View {
                     .fontWeight(.semibold)
                     .padding()
                 Spacer()
-                Text(String(Course.classGrade) + "%")
+                Text(Course.classGradeLetter + "    " + String(Course.classGrade) + "%")
                     .font(.title2)
                     .padding()
             }
@@ -39,12 +39,12 @@ struct CourseDetail: View {
                 }) {
                     HStack {
                         Text("Delete Course")
-                            .fontWeight(.bold)
+                            .fontWeight(.semibold)
                             .font(.title3)
                     }
                     .padding()
-                    .foregroundColor(.black)
-                    .background(Color.gray)
+                    .foregroundColor(.white)
+                    .background(Color.red)
                     .cornerRadius(30)
                 }
 
@@ -54,10 +54,3 @@ struct CourseDetail: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
-
-//struct CourseDetail_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CourseDetail(Course: courses[1], courseList: )
-//
-//    }
-//}

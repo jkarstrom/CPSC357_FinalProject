@@ -27,33 +27,32 @@ struct CourseList: View {
         
         var body: some View {
             
-            VStack {
+            NavigationView {
                 
-                NavigationView {
-                    
+                VStack {
                     List(courseList) { course in
                         NavigationLink(destination: CourseDetail(Course: course, courseList: $courseList)) {
                             CourseRow(Course: course)
                         }
-                    }
-                    .navigationTitle("GPA: " + String(totalGPA))
+                    }.navigationTitle("GPA: " + String(totalGPA))
                     
+                    Button(action: {
+                        self.showingDetail.toggle()
+                    }) {
+                        Text("Add Course")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.green)
+                            .cornerRadius(30)
+                        }.sheet(isPresented: $showingDetail) {
+                            NewCourse(toggleThis: $showingDetail, courseList: $courseList.onChange(recalcGPA))
+                            }
+                    .padding()
                 }
                 
-                Button(action: {
-                    self.showingDetail.toggle()
-                }) {
-                    Text("Add Course")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.green)
-                        .cornerRadius(30)
-                    }.sheet(isPresented: $showingDetail) {
-                        NewCourse(toggleThis: $showingDetail, courseList: $courseList.onChange(recalcGPA))
-                        }
-                .padding()
+                
             }
             
             

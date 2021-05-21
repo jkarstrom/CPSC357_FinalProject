@@ -20,6 +20,7 @@
 		35A1F0B2262E324F0071ECA4 /* Grade_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A1F0B1262E324F0071ECA4 /* Grade_ManagerTests.swift */; };
 		35A1F0BD262E324F0071ECA4 /* Grade_ManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A1F0BC262E324F0071ECA4 /* Grade_ManagerUITests.swift */; };
 		ED5AADAF264C7F23009412FE /* courseData.json in Resources */ = {isa = PBXBuildFile; fileRef = ED5AADAE264C7F23009412FE /* courseData.json */; };
+		EDC9DBAE26580D4C006D4ACE /* EditCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9DBAD26580D4C006D4ACE /* EditCourse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		35A1F0BC262E324F0071ECA4 /* Grade_ManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade_ManagerUITests.swift; sourceTree = "<group>"; };
 		35A1F0BE262E324F0071ECA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED5AADAE264C7F23009412FE /* courseData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = courseData.json; sourceTree = "<group>"; };
+		EDC9DBAD26580D4C006D4ACE /* EditCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCourse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				357FDBCD26428BFF00C94736 /* CourseList.swift */,
 				352C75CC2649D2FC0011B75B /* CourseRow.swift */,
 				35A0ABEA264C6E9F00FEE7C5 /* CourseDetail.swift */,
+				EDC9DBAD26580D4C006D4ACE /* EditCourse.swift */,
 				3578ACC626545804005E4D8B /* NewCourse.swift */,
 			);
 			path = Views;
@@ -311,6 +314,7 @@
 				352C75CD2649D2FC0011B75B /* CourseRow.swift in Sources */,
 				35A0ABEB264C6E9F00FEE7C5 /* CourseDetail.swift in Sources */,
 				35A1F0A2262E324E0071ECA4 /* ContentView.swift in Sources */,
+				EDC9DBAE26580D4C006D4ACE /* EditCourse.swift in Sources */,
 				35A1F0A0262E324E0071ECA4 /* Grade_ManagerApp.swift in Sources */,
 				3578ACC726545804005E4D8B /* NewCourse.swift in Sources */,
 			);
