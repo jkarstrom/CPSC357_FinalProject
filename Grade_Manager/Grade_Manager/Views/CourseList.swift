@@ -32,7 +32,7 @@ struct CourseList: View {
                 NavigationView {
                     
                     List(courseList) { course in
-                        NavigationLink(destination: CourseDetail(Course: course)) {
+                        NavigationLink(destination: CourseDetail(Course: course, courseList: $courseList)) {
                             CourseRow(Course: course)
                         }
                     }
@@ -60,7 +60,7 @@ struct CourseList: View {
     func recalcGPA(courses: [Course]) {
         totalGPA = getGPA(courses: courseList)
     }
-    
+
 }
 
 

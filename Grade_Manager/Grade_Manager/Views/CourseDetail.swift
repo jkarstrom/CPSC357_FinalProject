@@ -9,21 +9,20 @@ import SwiftUI
 
 struct CourseDetail: View {
     var Course: Course
+    @Binding var courseList: [Course]
     
     var body: some View {
-        ScrollView{
-            Spacer()
+        VStack{
             HStack {
                 Text("Overall grade: " )
                     .font(.title2)
                     .fontWeight(.semibold)
                     .padding()
                 Spacer()
-                Text(String(Course.classGrade))
+                Text(String(Course.classGrade) + "%")
                     .font(.title2)
                     .padding()
             }
-            Spacer()
             HStack {
                 Text("Credits: " )
                     .font(.title2)
@@ -35,19 +34,11 @@ struct CourseDetail: View {
                     .padding()
             }
             
-            Spacer()
-            Spacer()
-            Spacer()
-            
-            
-            HStack{
-                
-                // this button will delete the course from the Json file
                 Button(action: {
-                    courses.remove(at: Course.id-1)
+                    courseList.remove(at: Course.id-1)
                 }) {
                     HStack {
-                        Text("Delete")
+                        Text("Delete Course")
                             .fontWeight(.bold)
                             .font(.title3)
                     }
@@ -56,8 +47,7 @@ struct CourseDetail: View {
                     .background(Color.red)
                     .cornerRadius(30)
                 }
-                
-            }
+
             
         }
         .navigationTitle(Course.className)
@@ -65,9 +55,9 @@ struct CourseDetail: View {
     }
 }
 
-struct CourseDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        CourseDetail(Course: courses[1])
-
-    }
-}
+//struct CourseDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CourseDetail(Course: courses[1], courseList: )
+//
+//    }
+//}

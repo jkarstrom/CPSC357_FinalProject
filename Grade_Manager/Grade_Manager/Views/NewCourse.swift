@@ -62,7 +62,7 @@ struct NewCourse: View {
                         .foregroundColor(.white)
                         .background(Color.black)
                         .cornerRadius(30)
-                    }
+                }.padding()
                 
                 
                 
@@ -72,9 +72,3 @@ struct NewCourse: View {
         
     }
 }
-
-//struct NewCourse_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NewCourse(toggleThis: toggleThis)
-//    }
-//}
