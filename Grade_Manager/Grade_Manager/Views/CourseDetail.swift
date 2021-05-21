@@ -42,38 +42,19 @@ struct CourseDetail: View {
             
             HStack{
                 
-                //this button will bring up a view to edit
-                NavigationLink(destination: EditCourse(Course: Course)) {
-                    Text("Edit Course")
-                        .fontWeight(.semibold)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.black)
-                        .cornerRadius(30)
-                }
-                
                 // this button will delete the course from the Json file
                 Button(action: {
                     courses.remove(at: Course.id-1)
                 }) {
                     HStack {
                         Text("Delete")
-                            .fontWeight(.semibold)
-                            .font(.title)
+                            .fontWeight(.bold)
+                            .font(.title3)
                     }
                     .padding()
                     .foregroundColor(.white)
                     .background(Color.red)
-                    .cornerRadius(40)
-                }
-                
-                NavigationLink(destination: NewCourse()) {
-                    Text("Add Course")
-                        .fontWeight(.semibold)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.black)
-                        .cornerRadius(30)
+                    .cornerRadius(30)
                 }
                 
             }

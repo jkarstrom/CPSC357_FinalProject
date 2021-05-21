@@ -7,38 +7,60 @@
 
 import SwiftUI
 
-//shows the list of classes and grades
-//on the top it shows overall GPA
+// shows the list of classes and grades
+// on the top it shows overall GPA
+
+extension Binding {
+    
+    func onChange(_ handler: @escaping (Value) -> Void) -> Binding<Value> {
+        Binding (get: {self.wrappedValue}, set: {newValue in self.wrappedValue = newValue
+                    handler(newValue)})
+    }
+    
+}
 
 struct CourseList: View {
-    var body: some View {
+    
+    @State var showingDetail = false
+    @State var courseList = courses
+    @State var totalGPA = gpa
         
-        VStack {
+        var body: some View {
             
-            NavigationView {
+            VStack {
                 
-                List(courses) { course in
-                    NavigationLink(destination: CourseDetail(Course: course)) {
-                        CourseRow(Course: course)
+                NavigationView {
+                    
+                    List(courseList) { course in
+                        NavigationLink(destination: CourseDetail(Course: course)) {
+                            CourseRow(Course: course)
+                        }
                     }
+                    .navigationTitle("GPA: " + String(totalGPA))
+                    
                 }
-                .navigationTitle("GPA: " + String(gpa))
                 
+                Button(action: {
+                    self.showingDetail.toggle()
+                }) {
+                    Text("Add Course")
+                        .fontWeight(.semibold)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(30)
+                    }.sheet(isPresented: $showingDetail) {
+                        NewCourse(toggleThis: $showingDetail, courseList: $courseList.onChange(recalcGPA))
+                        }
             }
             
-//            NavigationLink(destination: NewCourse()) {
-//                Text("Add Course")
-//                    .fontWeight(.semibold)
-//                    .padding()
-//                    .foregroundColor(.white)
-//                    .background(Color.black)
-//                    .cornerRadius(30)
-//            }
-//
-//            padding()
+            
         }
-        
+    
+    func recalcGPA(courses: [Course]) {
+        totalGPA = getGPA(courses: courseList)
     }
+    
 }
 
 

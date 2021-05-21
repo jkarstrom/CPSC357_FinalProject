@@ -16,6 +16,8 @@ struct NewCourse: View {
     @State var courseLetterN: String = ""
     @State var courseGradeN: String = ""
     @State var courseCreditsN: String = ""
+    @Binding var toggleThis: Bool
+    @Binding var courseList: [Course]
     
     var body: some View {
         
@@ -50,13 +52,20 @@ struct NewCourse: View {
                     .border(Color.gray, width: 2)
                     .padding()
                 
-                NavigationLink(destination: CourseList()) {
+                Button(action: {
+                    courseList.append(Course(id: courses.count+1, className: courseNameN, classGradeLetter: courseLetterN, classGrade: Int(courseGradeN)!, credits: Int(courseCreditsN)!))
+                    self.toggleThis.toggle()
+                }) {
                     Text("Add Course")
-                        .font(Font.headline.weight(.semibold))
-                }
-                .padding()
-                .border(Color.gray, width: 3)
-                .padding()
+                        .fontWeight(.semibold)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(30)
+                    }
+                
+                
+                
             }
             .navigationTitle("Add course")
         }
@@ -64,8 +73,8 @@ struct NewCourse: View {
     }
 }
 
-struct NewCourse_Previews: PreviewProvider {
-    static var previews: some View {
-        NewCourse()
-    }
-}
+//struct NewCourse_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewCourse(toggleThis: toggleThis)
+//    }
+//}

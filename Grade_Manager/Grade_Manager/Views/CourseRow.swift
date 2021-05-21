@@ -15,6 +15,7 @@ struct CourseRow: View {
             Text(Course.className)
             Spacer()
             Text(Course.classGradeLetter)
+                .padding(.horizontal)
             
         }
     }

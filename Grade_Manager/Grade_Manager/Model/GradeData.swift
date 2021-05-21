@@ -32,6 +32,8 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 }
 
+
+
 func getGPA(courses: [Course]) -> Double {
     
     var totalCredits: Int = 0
@@ -43,9 +45,9 @@ func getGPA(courses: [Course]) -> Double {
         totalCredits += course.credits
     }
     
-    print (totalPoints)
-    print (totalCredits)
-    return totalPoints / Double(totalCredits)
+    let unroundedGPA: Double = totalPoints / Double(totalCredits)
+    
+    return Double(round(1000 * unroundedGPA) / 1000)
 
 }
 
