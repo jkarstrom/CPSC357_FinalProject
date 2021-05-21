@@ -43,8 +43,8 @@ struct CourseDetail: View {
                             .font(.title3)
                     }
                     .padding()
-                    .foregroundColor(.white)
-                    .background(Color.red)
+                    .foregroundColor(.black)
+                    .background(Color.gray)
                     .cornerRadius(30)
                 }
 

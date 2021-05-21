@@ -44,14 +44,16 @@ struct CourseList: View {
                     self.showingDetail.toggle()
                 }) {
                     Text("Add Course")
+                        .font(.title)
                         .fontWeight(.semibold)
                         .padding()
                         .foregroundColor(.white)
-                        .background(Color.black)
+                        .background(Color.green)
                         .cornerRadius(30)
                     }.sheet(isPresented: $showingDetail) {
                         NewCourse(toggleThis: $showingDetail, courseList: $courseList.onChange(recalcGPA))
                         }
+                .padding()
             }
             
             
