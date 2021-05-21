@@ -18,34 +18,49 @@ struct NewCourse: View {
     @State var courseCreditsN: String = ""
     
     var body: some View {
-        VStack(alignment: .leading) {
-            TextField("Enter course name", text: $courseNameN)
-                .padding(.vertical)
-            TextField("Enter course grade letter", text: $courseLetterN)
-                .padding(.vertical)
-            TextField("Enter course grade percentage", text: $courseGradeN)
-                .padding(.vertical)
-            TextField("Enter course credits", text: $courseCreditsN)
-                .padding(.vertical)
-            
-            Button(action: {
-                let newCourse: Course = Course(id: courses.count+1, className: courseNameN, classGradeLetter: courseLetterN, classGrade: Int(courseGradeN)!, credits: Int(courseCreditsN)!)
-                courses.append(newCourse)
-                ContentView()
-            }) {
-                HStack {
-                    Image(systemName: "square.and.arrow.down")
-                        .font(.title)
-                    Text("Done")
-                        .fontWeight(.semibold)
-                        .font(.title)
+        
+        NavigationView {
+            VStack(alignment: .leading) {
+                Text("Name")
+                    .padding(.horizontal)
+                    .font(Font.headline.weight(.semibold))
+                TextField("Ex. MATH101", text: $courseNameN)
+                    .padding()
+                    .border(Color.gray, width: 2)
+                    .padding()
+                Text("Grade Letter")
+                    .padding(.horizontal)
+                    .font(Font.headline.weight(.semibold))
+                TextField("Ex. A", text: $courseLetterN)
+                    .padding()
+                    .border(Color.gray, width: 2)
+                    .padding()
+                Text("Grade Percentage")
+                    .padding(.horizontal)
+                    .font(Font.headline.weight(.semibold))
+                TextField("Ex. 95", text: $courseGradeN)
+                    .padding()
+                    .border(Color.gray, width: 2)
+                    .padding()
+                Text("Credits")
+                    .padding(.horizontal)
+                    .font(Font.headline.weight(.semibold))
+                TextField("Ex. 3", text: $courseCreditsN)
+                    .padding()
+                    .border(Color.gray, width: 2)
+                    .padding()
+                
+                NavigationLink(destination: CourseList()) {
+                    Text("Add Course")
+                        .font(Font.headline.weight(.semibold))
                 }
                 .padding()
-                .foregroundColor(.white)
-                .background(Color.black)
-                .cornerRadius(40)
+                .border(Color.gray, width: 3)
+                .padding()
             }
+            .navigationTitle("Add course")
         }
+        
     }
 }
 

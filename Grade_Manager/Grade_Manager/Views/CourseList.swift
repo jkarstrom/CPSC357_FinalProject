@@ -15,41 +15,28 @@ struct CourseList: View {
         
         VStack {
             
-            //overall average
-            HStack{
-                Text("Overall GPA: ")
-                    .font(.largeTitle)
-                
-                Text(String(gpa))
-                    .font(.largeTitle)
-            }
-            
-            Spacer()
-            
-            Button(action: {
-                NewCourse()
-            }) {
-                HStack {
-                    Text("Add Course")
-                        .fontWeight(.semibold)
-                }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.black)
-                .cornerRadius(30)
-            }
-           
             NavigationView {
+                
                 List(courses) { course in
                     NavigationLink(destination: CourseDetail(Course: course)) {
                         CourseRow(Course: course)
                     }
                 }
-                .navigationTitle("Courses")
+                .navigationTitle("GPA: " + String(gpa))
+                
             }
             
+//            NavigationLink(destination: NewCourse()) {
+//                Text("Add Course")
+//                    .fontWeight(.semibold)
+//                    .padding()
+//                    .foregroundColor(.white)
+//                    .background(Color.black)
+//                    .cornerRadius(30)
+//            }
+//
+//            padding()
         }
-        .background(Color.pink)
         
     }
 }
